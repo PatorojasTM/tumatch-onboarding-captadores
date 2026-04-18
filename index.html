@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TuMatch Inmobiliario · Onboarding Captador 2026</title>
+<meta name="description" content="Onboarding oficial TuMatch Inmobiliario: sé captador certificado. Rentabiliza tus redes, gana hasta el 35% de los negocios, domina el CRM, los acuerdos de captación con y sin exclusividad, la tasación y la captación de arrendatarios con perfil estrella.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,700&family=Cinzel:wght@500;600;700;800;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<meta name="theme-color" content="#FAF8F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1621" media="(prefers-color-scheme: dark)">
+<script>
+  (function(){
+    try{
+      var saved = localStorage.getItem('tumatch_theme');
+      if (saved === 'dark' || saved === 'light') { document.documentElement.setAttribute('data-theme', saved); }
+    }catch(e){}
+  })();
+</script>
+</head>
+<body>
+
+<div class="academy-bar">
+  <span class="academy-bar-inner">Academia de Corredores · TuMatch Inmobiliario · Programa Captador</span>
+</div>
+<header class="hdr">
+  <div class="grad-stripe"></div>
+  <div class="hdr-row">
+    <a class="brand-logo" href="#" onclick="App.goToModule(0);return false;" aria-label="Academia TuMatch Inmobiliario — Inicio">
+      <img class="brand-img" id="brandLogoImg" src="assets/tumatch_horizontal_positivo.jpg" alt="TuMatch Inmobiliario">
+      <div class="brand-tagline">
+        <div class="brand-tagline-l1">Academia de Corredores</div>
+        <div class="brand-tagline-l2">Onboarding Captador · 2026</div>
+      </div>
+    </a>
+    <div class="hdr-actions">
+      <span class="taller-badge">Onboarding Oficial 2026</span>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo claro/oscuro" title="Cambiar modo claro/oscuro">
+        <svg class="tt-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="12" y1="2.5" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21.5" y2="12"/><line x1="4.9" y1="4.9" x2="6.7" y2="6.7"/><line x1="17.3" y1="17.3" x2="19.1" y2="19.1"/><line x1="4.9" y1="19.1" x2="6.7" y2="17.3"/><line x1="17.3" y1="6.7" x2="19.1" y2="4.9"/></g></svg>
+        <svg class="tt-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="progress-wrap">
+  <div class="progress-inner">
+    <span class="progress-label">Progreso del onboarding</span>
+    <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    <span class="progress-num" id="progressNum">0%</span>
+  </div>
+</div>
+
+<nav class="modnav"><div class="modnav-inner" id="modnavInner"></div></nav>
+
+<!-- ===== MÓDULO 0 · INTRO ===== -->
+<section class="module active" id="mod-0">
+  <div class="hero-new">
+    <div class="hero-new-inner">
+      <div class="hero-academy-mark">Programa Captador</div>
+      <img class="hero-logo" id="heroLogoImg" src="assets/tumatch_horizontal_positivo.jpg" alt="TuMatch Inmobiliario">
+      <div class="hero-eyebrow-line">Onboarding Oficial · 2026</div>
+      <h1 class="hero-title">Sé Captador<br><em>de TuMATCH</em></h1>
+      <p class="hero-lead">Gana <strong>hasta el 35%</strong> de los negocios sentado en tu escritorio. Aprovecha tus redes, captura clientes con perfil estrella y activa tu cupo en un equipo que ejecuta por ti.</p>
+
+      <div class="hero-meta">
+        <div class="hero-meta-item"><div class="hero-meta-num">10</div><div class="hero-meta-lbl">Módulos</div></div>
+        <div class="hero-meta-sep"></div>
+        <div class="hero-meta-item"><div class="hero-meta-num">1–1,5<span class="u">h</span></div><div class="hero-meta-lbl">Duración</div></div>
+        <div class="hero-meta-sep"></div>
+        <div class="hero-meta-item"><div class="hero-meta-num">30<span class="u">pt</span></div><div class="hero-meta-lbl">Prueba final</div></div>
+        <div class="hero-meta-sep"></div>
+        <div class="hero-meta-item"><div class="hero-meta-num">1</div><div class="hero-meta-lbl">Certificado</div></div>
+      </div>
+
+      <div id="resumeBanner" class="resume-banner" style="display:none">
+        <div class="resume-banner-icon">📖</div>
+        <div class="resume-banner-body">
+          <div class="resume-banner-title">Tienes avance guardado</div>
+          <div class="resume-banner-text" id="resumeBannerText">Puedes continuar donde quedaste.</div>
+        </div>
+        <button class="btn btn-primary resume-banner-btn" id="resumeBannerBtn">Continuar →</button>
+      </div>
+
+      <div class="hero-cta-row">
+        <button class="hero-cta-new" onclick="App.startModule(1)" id="heroStartBtn">Comenzar onboarding →</button>
+      </div>
+
+      <div class="hero-save-hint">
+        <span class="save-dot"></span>
+        <span>Tu avance se guarda automáticamente. Tras 5 errores en un módulo, queda bloqueado 10 minutos.</span>
+      </div>
+
+      <div class="pre-taller">
+        <strong>TuMATCH en rentabilizar tus redes.</strong> Si solo quieres captar algunos clientes de tu red sin transformarte en corredor full-time, también estamos disponibles para ti. <em>Aplica a este curso</em> y te certificamos como captador: activamos tu perfil en el CRM, te asignamos un Team Leader que te refiere propiedades, y coordinamos la firma del <em>Anexo N°2 de Referidos y Captación</em>. Aquí aprenderás a trabajar tu círculo caliente, romper el hielo con el tibio, y cuando formes parte del equipo, te capacitaremos para sacar partido del círculo frío — incluso transformarte en corredor freelance si quieres crecer.
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="sec-header" style="text-align:center;margin-bottom:36px">
+      <div class="sec-tag" style="margin-left:auto;margin-right:auto"><span class="dot"></span>Contenido del onboarding</div>
+      <h2 class="sec-h2" style="margin-left:auto;margin-right:auto;max-width:720px">10 módulos · del primer contacto a la captación firmada</h2>
+      <p class="sec-desc" style="margin-left:auto;margin-right:auto">Cada módulo combina teoría, ejemplos reales, herramientas TuMatch y quiz de 5 preguntas. Banco rotativo de 10 por módulo. Si fallas, la pregunta cambia. Prueba final con 30 preguntas y certificación como Captador TuMatch.</p>
+    </div>
+
+    <div class="mod-timeline">
+      <div class="mod-t-item" onclick="App.startModule(1)">
+        <div class="mod-t-num">01</div>
+        <div class="mod-t-body">
+          <div class="mod-t-head"><div class="mod-t-title">Sé Captador de TuMATCH</div><div class="mod-t-time">≈ 8 min</div></div>
+          <div class="mod-t-keys"><span>Bienvenida</span><span>35% por lado</span><span>Rentabiliza tus redes</span><span>Equipo</span></div>
+        </div>
+      </div>
+      <div class="mod-t-item" onclick="App.startModule(2)">
+        <div class="mod-t-num">02</div>
+        <div class="mod-t-body">
+          <div class="mod-t-head"><div class="mod-t-title">Comisiones 2026 · Referido y Captador</div><div class="mod-t-time">≈ 10 min</div></div>
+          <div class="mod-t-keys"><span>Tabla de lados</span><span>Anexo N°2</span><span>Arrendador 30%</span><span>Comprador 30%</span></div>
+        </div>
+      </div>
+      <div class="mod-t-item" onclick="App.startModule(3)">
+        <div class="mod-t-num">03</div>
+        <div class="mod-t-body">
+          <div class="mod-t-head"><div class="mod-t-title">Círculos · Caliente, Tibio y Frío</div><div class="mod-t-time">≈ 8 min</div></div>
+          <div class="mod-t-keys"><span>Red personal</span><span>Romper el hielo</span><span>Nurture</span><span>Primeros cierres</span></div>
+        </div>
+      </div>
+      <div class="mod-t-item" onclick="App.startModule(4)">
+        <div class="mod-t-num">04</div>
+        <div class="mod-t-body">
+          <div class="mod-t-head"><div class="mod-t-title">Motivación y Constancia</div><div class="mod-t-time">≈ 7 min</div></div>
+          <div class="mod-t-keys"><span>Hábitos diarios</span><span>Mes 3</span><span>Accountability</span><span>Metas reales</span></div>
+        </div>
+      </div>
+      <div class="mod-t-item" onclick="App.startModule(5)">
+        <div class="mod-t-num">05</div>
+        <div class="mod-t-body">
+          <div class="mod-t-head"><div class="mod-t-title">Ecosistema y Servicios TuMatch</div><div class="mod-t-time">≈ 8 min</div></div>
+          <div class="mod-t-keys"><span>Qué hacemos</span><span>Herramientas</span><span>Fidelidad a la marca</span><span>Transparencia</span></div>
+        </div>
+      </div>
+      <div class="mod-t-item" onclick="App.startModule(6)">
+        <div class="mod-t-num">06</div>
+        <div class="mod-t-body">
+          <div class="mod-t-head"><div class="mod-t-title">CRM · Embudo de Captación</div><div class="mod-t-time">≈ 10 min</div></div>
+          <div class="mod-t-keys"><span>/embudo-captacion</span><span>Etapas</span><span>Notas</span><span>Registro previo</span></div>
+        </div>
+      </div>
+      <div class="mod-t-item" onclick="App.startModule(7)">
+        <div class="mod-t-num">07</div>
+        <div class="mod-t-body">
+          <div class="mod-t-head"><div class="mod-t-title">Acuerdos · Con y Sin Exclusividad</div><div class="mod-t-time">≈ 10 min</div></div>
+          <div class="mod-t-keys"><span>Plazos</span><span>Cláusulas</span><span>Marketing</span><span>Cuándo usar cada uno</span></div>
+        </div>
+      </div>
+      <div class="mod-t-item" onclick="App.startModule(8)">
+        <div class="mod-t-num">08</div>
+        <div class="mod-t-body">
+          <div class="mod-t-head"><div class="mod-t-title">Captar en Precio · Tasación</div><div class="mod-t-time">≈ 9 min</div></div>
+          <div class="mod-t-keys"><span>UF/m²</span><span>Herramienta de tasación</span><span>Comparables</span><span>Precio comercial</span></div>
+        </div>
+      </div>
+      <div class="mod-t-item" onclick="App.startModule(9)">
+        <div class="mod-t-num">09</div>
+        <div class="mod-t-body">
+          <div class="mod-t-head"><div class="mod-t-title">Captación de Arrendatario ★</div><div class="mod-t-time">≈ 9 min</div></div>
+          <div class="mod-t-keys"><span>Documentos</span><span>Perfil estrella</span><span>Dicom / aval</span><span>Privacidad</span></div>
+        </div>
+      </div>
+      <div class="mod-t-item" onclick="App.startModule(10)">
+        <div class="mod-t-num">10</div>
+        <div class="mod-t-body">
+          <div class="mod-t-head"><div class="mod-t-title">TL, Equipo y Rentabiliza tus Redes</div><div class="mod-t-time">≈ 8 min</div></div>
+          <div class="mod-t-keys"><span>Team Leader</span><span>Freelance</span><span>Camino de crecimiento</span><span>Activar perfil</span></div>
+        </div>
+      </div>
+      <div class="mod-t-item mod-t-final">
+        <div class="mod-t-num">★</div>
+        <div class="mod-t-body">
+          <div class="mod-t-head"><div class="mod-t-title">Prueba Final + Certificado Captador</div><div class="mod-t-time">≈ 15 min</div></div>
+          <div class="mod-t-keys"><span>30 preguntas</span><span>30/30 aprueba</span><span>Certificado descargable</span><span>Contacto WhatsApp</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="how-works">
+      <div class="how-item">
+        <div class="how-n">01</div>
+        <div class="how-title">Aprende con método</div>
+        <div class="how-text">Cada módulo termina con 5 preguntas. Debes responderlas todas correctas para desbloquear el siguiente.</div>
+      </div>
+      <div class="how-item">
+        <div class="how-n">02</div>
+        <div class="how-title">Banco rotativo</div>
+        <div class="how-text">Si fallas, la pregunta cambia desde un banco de 10 por módulo. Tras 5 errores acumulados, el módulo se bloquea 10 minutos.</div>
+      </div>
+      <div class="how-item">
+        <div class="how-n">03</div>
+        <div class="how-title">Certificación oficial</div>
+        <div class="how-text">30 preguntas finales. 30/30 para certificarte, descargar el diploma y activar tu perfil por WhatsApp.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 1: Sé Captador de TuMATCH ===== -->
+<section class="module" id="mod-1">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 1 · Sé Captador de TuMATCH</div>
+      <h2 class="sec-h2">Bienvenido al programa que rentabiliza tu red</h2>
+      <p class="sec-desc">Este es el módulo donde entiendes <strong>qué es ser captador</strong>, por qué TuMatch te paga hasta el 35% del lado del negocio, y cómo puedes ganar dinero sentado en tu escritorio activando tus contactos.</p>
+    </div>
+
+    <div class="grid-2" style="margin-bottom:28px">
+      <div class="card" style="border-left:4px solid var(--capt-pink)">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--capt-pinkDk);margin-bottom:14px">¿Qué es un captador?</div>
+        <p style="font-family:'EB Garamond',serif;font-size:15.5px;color:var(--ui-text-soft);line-height:1.7;font-weight:500">El captador es quien <strong style="color:var(--ui-text)">conecta un cliente con TuMatch y formaliza el acuerdo</strong> — ya sea el acuerdo de captación con el propietario, o la orden de visita con el arrendatario/comprador. No necesita ejecutar la gestión comercial: un corredor del equipo puede ocuparse de eso.</p>
+      </div>
+      <div class="card" style="border-left:4px solid var(--gold)">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--goldDk);margin-bottom:14px">¿Cuánto puedes ganar?</div>
+        <ul class="checklist">
+          <li><strong>Arrendador · 30%</strong> del lado (referido 25% + acuerdo 5%)</li>
+          <li><strong>Comprador · 30%</strong> del lado (desde enero 2026)</li>
+          <li><strong>Arrendatario · 10%</strong> del lado con orden de visita</li>
+          <li><strong>Vendedor · 10%</strong> del lado</li>
+          <li>Si tú mismo ejecutas + tienes TL, puedes sumar <strong>hasta ~60% del lado</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-box pink">
+      <span class="info-icon">💡</span>
+      <div class="info-text"><strong>Idea clave:</strong> no vendes propiedades. Formalizas captaciones. Un arquitecto, un profesor, un ex-banquero, un deportista, un contador — cualquiera con una <em>red activa</em> puede ser captador TuMatch.</div>
+    </div>
+
+    <div class="grid-3" style="margin-top:26px;margin-bottom:28px">
+      <div class="tip-card">
+        <div class="tip-title">Rentabiliza tus redes</div>
+        <div class="tip-text">Ya conoces a 100+ personas que van a arrendar, comprar o vender algo en los próximos 3 años. <strong>Monetiza esa red</strong> con comisiones formales y trazables.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-title">Trabaja desde tu escritorio</div>
+        <div class="tip-text">No hace falta sacar fotos, ir a visitas ni negociar contratos. <strong>El equipo TuMatch ejecuta por ti</strong> y tu comisión se paga al cierre.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-title">Te acompaña un TL</div>
+        <div class="tip-text">Tu Team Leader te deriva captaciones de la zona y te apoya en la negociación. <strong>Él necesita que captes</strong> para alimentar a su equipo.</div>
+      </div>
+    </div>
+
+    <div class="info-box success">
+      <span class="info-icon">🎯</span>
+      <div class="info-text"><strong>Meta de los primeros 60 días:</strong> cerrar 3 primeros casos con tu círculo caliente (familia/amigos íntimos). Es la prueba de concepto más rápida y tu primer testimonio para crecer con el círculo tibio.</div>
+    </div>
+
+    <div id="quiz-1" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 2: Comisiones 2026 ===== -->
+<section class="module" id="mod-2">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 2 · Comisiones 2026</div>
+      <h2 class="sec-h2">Referido vs Captador · la tabla oficial</h2>
+      <p class="sec-desc">Este es el esquema del <strong>Anexo N°2 de Referidos y Captación</strong> que firmarás al terminar el onboarding. Aplica a corredores, Team Leaders y referidores externos de la red TuMatch.</p>
+    </div>
+
+    <div id="commissions-grid" class="commission-grid"></div>
+
+    <div class="info-box warn">
+      <span class="info-icon">📅</span>
+      <div class="info-text"><strong>Actualización enero 2026:</strong> el referido de <strong>Comprador sube de 5% a 25%</strong>, equiparándose al referido de Arrendador. Aplica a operaciones cuyo acuerdo de captación o inicio formal de gestión sea posterior al <strong>1 de enero de 2026</strong>.</div>
+    </div>
+
+    <div style="overflow-x:auto;margin:28px 0">
+      <table class="barrio-table">
+        <thead><tr><th>Lado</th><th>Referido</th><th>Captador</th><th>Cómo se construye la comisión del captador</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Arrendatario</strong></td><td>5%</td><td>10%</td><td>Referido 5% + Orden de visita 5% = 10% del lado</td></tr>
+          <tr><td><strong>Arrendador</strong></td><td>25%</td><td>30%</td><td>Referido 25% + Acuerdo de captación 5% = 30% del lado</td></tr>
+          <tr><td><strong>Comprador</strong></td><td>25%</td><td>30%</td><td>Referido 25% + Acuerdo de captación 5% = 30% del lado</td></tr>
+          <tr><td><strong>Vendedor</strong></td><td>5%</td><td>10%</td><td>Referido 5% + Acuerdo de captación 5% = 10% del lado</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid-2" style="margin:28px 0">
+      <div class="card">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--capt-pinkDk);margin-bottom:14px">Ejemplo 1 · Arriendo $100.000/mes</div>
+        <div class="formula-box">
+          <div class="formula-label">Corredor freelance sin TL, con referidor externo</div>
+          <div class="formula-example">
+            Referidor arrendador (externo): 25% = <strong>$25.000</strong><br>
+            Orden de visita arrendatario: 5% = <strong>$5.000</strong><br>
+            Gestión arrendatario (sin TL): 35% = <strong>$35.000</strong><br>
+            Gestión arrendador (sin TL): 35% = <strong>$35.000</strong><br>
+            TuMatch retiene: 60% arrendatario / 40% arrendador
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--capt-pinkDk);margin-bottom:14px">Ejemplo 2 · Comprador con TL</div>
+        <div class="formula-box">
+          <div class="formula-label">Captador + gestor, con Team Leader</div>
+          <div class="formula-example">
+            Captador comprador: 30% del lado (referido 25% + acuerdo 5%)<br>
+            Gestión comercial (con TL): 30% del lado<br>
+            <strong>Total corredor: 60%</strong> (máximo distribuible con TL)<br>
+            TL recibe: 4,5% del lado · <em>pagado por TuMatch desde su retención</em><br>
+            TuMatch retiene: aprox. 35,5%
+          </div>
+        </div>
+        <p style="margin-top:14px;font-family:'EB Garamond',serif;font-size:15.5px;color:var(--ui-text-soft);line-height:1.7;font-style:italic">La comisión del TL <strong style="color:var(--capt-pinkDk);font-style:normal">no se descuenta del corredor</strong>: la paga TuMatch desde su propia tajada. El corredor conserva su 60% íntegro.</p>
+      </div>
+    </div>
+
+    <div class="info-box info">
+      <span class="info-icon">📝</span>
+      <div class="info-text"><strong>Registro obligatorio:</strong> el referido debe ser registrado formalmente en el CRM TuMatch <em>antes</em> del primer contacto con el corredor ejecutor. Sin registro previo, no hay derecho a comisión. Acuerdos externos requieren suscribir el anexo correspondiente.</div>
+    </div>
+
+    <div id="quiz-2" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 3: Círculos ===== -->
+<section class="module" id="mod-3">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 3 · Círculos de red</div>
+      <h2 class="sec-h2">Caliente, tibio y frío · donde encontrar tus clientes</h2>
+      <p class="sec-desc">Todo captador empieza con la misma regla de oro: <strong>trabaja primero donde hay confianza</strong>. Cada círculo tiene tácticas distintas, plazos distintos y conversiones distintas.</p>
+    </div>
+
+    <div id="circles-grid" class="circle-grid"></div>
+
+    <div class="bar-chart">
+      <div class="bar-chart-title">Conversión promedio por círculo (benchmark captadores TuMatch)</div>
+      <div class="bar-row bar-hot"><div class="bar-label">Caliente</div><div class="bar-bar"><div class="bar-fill" style="width:85%">33% · 1 de 3</div></div></div>
+      <div class="bar-row bar-warm"><div class="bar-label">Tibio</div><div class="bar-bar"><div class="bar-fill" style="width:45%">10% · 1 de 10</div></div></div>
+      <div class="bar-row bar-cold"><div class="bar-label">Frío</div><div class="bar-bar"><div class="bar-fill" style="width:18%">2,5% · 1 de 40</div></div></div>
+    </div>
+
+    <div class="sec-header" style="margin-top:30px;margin-bottom:18px">
+      <div class="sec-tag"><span class="dot"></span>Cómo romper el hielo</div>
+      <h2 class="sec-h2" style="font-size:24px">Guion base por círculo</h2>
+    </div>
+
+    <div class="grid-3">
+      <div class="tip-card">
+        <div class="tip-title">Caliente · llamada directa</div>
+        <div class="tip-text">"Hola, te cuento: empecé a trabajar formalmente con TuMatch Inmobiliario. ¿Me puedes contar si tú o alguien cercano anda pensando en <strong>arrendar, comprar o vender</strong> algo en los próximos meses?"</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-title">Tibio · reconexión primero</div>
+        <div class="tip-text">Primer mensaje <strong>sin agenda comercial</strong>. Pregunta cómo está. En el segundo intercambio (o el siguiente día) cuentas tu nuevo rol y ofreces ayuda. Nunca en el primer "hola".</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-title">Frío · valor primero</div>
+        <div class="tip-text">Contenido educativo, testimonios y datos de mercado por <strong>3–5 meses</strong>. Responde dudas sin pedir nada. Cuando pregunten, ya eres referente.</div>
+      </div>
+    </div>
+
+    <div class="info-box pink" style="margin-top:24px">
+      <span class="info-icon">🔥</span>
+      <div class="info-text"><strong>Regla del captador nuevo:</strong> tus primeros <strong>30 días</strong> son 100% círculo caliente. Mes 2 abres el tibio. El frío recién entra al mes 3–4 y siempre con contenido, no con pitch.</div>
+    </div>
+
+    <div id="quiz-3" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 4: Motivación y Constancia ===== -->
+<section class="module" id="mod-4">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 4 · Motivación y Constancia</div>
+      <h2 class="sec-h2">La verdadera diferencia entre captadores</h2>
+      <p class="sec-desc">El 70% de los captadores nuevos abandonan antes del mes 3. No porque el modelo falle, sino porque <strong>pierden la constancia</strong> cuando llegan los primeros "no". Este módulo te enseña a construir una rutina sostenible.</p>
+    </div>
+
+    <div class="grid-2" style="margin-bottom:28px">
+      <div class="card">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--capt-pinkDk);margin-bottom:14px">Rutina diaria mínima</div>
+        <ul class="checklist">
+          <li>5 mensajes de seguimiento a contactos tibios</li>
+          <li>3 llamadas cortas a círculo caliente</li>
+          <li>1 conversación real con alto potencial</li>
+          <li>Cargar y actualizar CRM (30 min)</li>
+          <li>Revisar leads del TL</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);margin-bottom:14px">Señales de desmotivación</div>
+        <ul class="checklist warn">
+          <li>Evitas abrir el CRM más de un día</li>
+          <li>Postergas conversaciones incómodas</li>
+          <li>Te comparas con captadores mucho más rodados</li>
+          <li>Buscas "el truco" en vez de ejecutar lo básico</li>
+          <li>Dejas de conversar con tu TL</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-header" style="margin-top:16px;margin-bottom:16px">
+      <div class="sec-tag"><span class="dot"></span>Claves de constancia</div>
+      <h2 class="sec-h2" style="font-size:24px">Rituales pequeños, resultados grandes</h2>
+    </div>
+
+    <div class="habit-pills">
+      <span class="habit-pill">Tiempo defendido en agenda</span>
+      <span class="habit-pill">Meta semanal, no anual</span>
+      <span class="habit-pill">Accountability con tu TL</span>
+      <span class="habit-pill">Celebrar micro-logros</span>
+      <span class="habit-pill">Dormir 7+ horas</span>
+      <span class="habit-pill">Revisar el CRM como rutina</span>
+      <span class="habit-pill">Volver al "por qué" cada lunes</span>
+      <span class="habit-pill">Conversación diaria nueva</span>
+    </div>
+
+    <div class="info-box success">
+      <span class="info-icon">🏁</span>
+      <div class="info-text"><strong>Meta 30 días:</strong> 10 reuniones reales agendadas + 2 acuerdos de captación firmados. No mides cierres todavía: mides <em>actividad que gatilla cierre</em>. Si haces la actividad, los cierres llegan entre el mes 2 y el mes 4.</div>
+    </div>
+
+    <div id="quiz-4" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 5: Ecosistema TuMatch ===== -->
+<section class="module" id="mod-5">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 5 · Ecosistema TuMatch</div>
+      <h2 class="sec-h2">Qué hacemos y qué NO hacemos</h2>
+      <p class="sec-desc">Ser captador es <strong>representar</strong> TuMatch frente a tu red. Tienes que ser honesto con lo que ofrecemos y usar las herramientas que nos hacen distintos. Este módulo define ambas cosas.</p>
+    </div>
+
+    <div class="grid-2" style="margin-bottom:26px">
+      <div class="card" style="border-left:4px solid var(--capt-pink)">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--capt-pinkDk);margin-bottom:14px">Lo que sí hacemos</div>
+        <ul class="checklist">
+          <li>Corretaje de arriendo (arrendador y arrendatario)</li>
+          <li>Corretaje de compraventa (vendedor y comprador)</li>
+          <li>Asesoría en decisión de inversión inmobiliaria</li>
+          <li>Estimación de precio con datos de mercado</li>
+          <li>Acompañamiento hasta la escrituración</li>
+          <li>Plataforma digital (CRM + herramientas)</li>
+          <li>Red con Team Leaders por zona</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left:4px solid var(--orange)">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);margin-bottom:14px">Lo que NO prometemos</div>
+        <ul class="checklist warn">
+          <li>Vender en una semana a precio sobre-mercado</li>
+          <li>Ejecutar trabajos notariales o legales (derivamos)</li>
+          <li>Garantizar comprador específico sin gestión</li>
+          <li>Evaluar técnicamente defectos de construcción</li>
+          <li>Hacer regularizaciones municipales</li>
+          <li>Sustituir a tasadores oficiales bancarios</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-header" style="margin-top:30px;margin-bottom:18px">
+      <div class="sec-tag"><span class="dot"></span>Herramientas TuMatch</div>
+      <h2 class="sec-h2" style="font-size:24px">Úsalas siempre frente al cliente</h2>
+    </div>
+
+    <div class="grid-3">
+      <div class="tip-card">
+        <div class="tip-title">Calculadora Hipotecaria</div>
+        <div class="tip-text"><a href="https://tumatch-leads.vercel.app/herramientas/calculadora-hipotecaria" target="_blank" style="color:var(--capt-pinkDk);font-weight:700;text-decoration:underline">/herramientas/calculadora-hipotecaria</a> — dividendo, plazos, subsidio.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-title">Tasación / estimación</div>
+        <div class="tip-text"><a href="https://tumatch-leads.vercel.app/herramientas/tasacion" target="_blank" style="color:var(--capt-pinkDk);font-weight:700;text-decoration:underline">/herramientas/tasacion</a> — precio de mercado para captar y para validar al comprador.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-title">Análisis de rentabilidad</div>
+        <div class="tip-text"><a href="https://tumatch-leads.vercel.app/herramientas/rentabilidad" target="_blank" style="color:var(--capt-pinkDk);font-weight:700;text-decoration:underline">/herramientas/rentabilidad</a> — cap rate, plusvalía, payback para inversionistas.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-title">Calculadora de comisión</div>
+        <div class="tip-text"><a href="https://tumatch-leads.vercel.app/herramientas/calculadora-comision" target="_blank" style="color:var(--capt-pinkDk);font-weight:700;text-decoration:underline">/herramientas/calculadora-comision</a> — cuánto ganas antes de aceptar el caso.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-title">CRM · Leads</div>
+        <div class="tip-text"><a href="https://tumatch-leads.vercel.app/leads" target="_blank" style="color:var(--capt-pinkDk);font-weight:700;text-decoration:underline">/leads</a> — perfilado y gestión de clientes.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-title">Embudo de captación</div>
+        <div class="tip-text"><a href="https://tumatch-leads.vercel.app/embudo-captacion" target="_blank" style="color:var(--capt-pinkDk);font-weight:700;text-decoration:underline">/embudo-captacion</a> — tu tablero diario como captador.</div>
+      </div>
+    </div>
+
+    <div class="info-box pink" style="margin-top:24px">
+      <span class="info-icon">🤝</span>
+      <div class="info-text"><strong>Ser fiel a la marca:</strong> si un cliente te pide algo fuera del core (regularización, peritaje técnico, asesoría tributaria profunda), <em>derívalo a partners</em>. No prometas servicios que TuMatch no entrega: una mala primera experiencia daña a toda la red.</div>
+    </div>
+
+    <div id="quiz-5" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 6: CRM Embudo ===== -->
+<section class="module" id="mod-6">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 6 · Embudo de Captación</div>
+      <h2 class="sec-h2">Tu tablero diario como captador</h2>
+      <p class="sec-desc">El CRM no es una obligación administrativa: es <strong>tu garantía de comisión</strong>. Un lead sin cargar no te pertenece. Este módulo te enseña el flujo completo en <a href="https://tumatch-leads.vercel.app/embudo-captacion" target="_blank" style="color:var(--capt-pinkDk);font-weight:700;text-decoration:underline">/embudo-captacion</a>.</p>
+    </div>
+
+    <div class="crm-mock">
+      <div class="crm-mock-header">
+        <div class="crm-mock-dot crm-mock-dot-r"></div>
+        <div class="crm-mock-dot crm-mock-dot-y"></div>
+        <div class="crm-mock-dot crm-mock-dot-g"></div>
+        <div class="crm-mock-url">tumatch-leads.vercel.app/embudo-captacion</div>
+      </div>
+      <div class="crm-mock-cols">
+        <div class="crm-mock-col">
+          <div class="crm-mock-col-title">Lead Nuevo</div>
+          <div class="crm-mock-card"><strong>María P. · Arrendador</strong><small>Ñuñoa · UF 4.500</small></div>
+          <div class="crm-mock-card"><strong>José M. · Vendedor</strong><small>Providencia · UF 8.900</small></div>
+        </div>
+        <div class="crm-mock-col">
+          <div class="crm-mock-col-title">Contactado</div>
+          <div class="crm-mock-card"><strong>Daniela R. · Comprador</strong><small>Las Condes · pie 20%</small></div>
+        </div>
+        <div class="crm-mock-col">
+          <div class="crm-mock-col-title">Reunión agendada</div>
+          <div class="crm-mock-card"><strong>Andrés V. · Arrendatario</strong><small>Estación Central</small></div>
+        </div>
+        <div class="crm-mock-col">
+          <div class="crm-mock-col-title">Acuerdo firmado</div>
+          <div class="crm-mock-card"><strong>Carmen S. · Arrendador</strong><small>★ Exclusividad 90d</small></div>
+        </div>
+        <div class="crm-mock-col">
+          <div class="crm-mock-col-title">Publicado</div>
+          <div class="crm-mock-card"><strong>Roberto L. · Vendedor</strong><small>★ Portal + redes</small></div>
+        </div>
+        <div class="crm-mock-col">
+          <div class="crm-mock-col-title">Cerrado</div>
+          <div class="crm-mock-card"><strong>Javier T. · Comprador</strong><small>✓ Comisión pagada</small></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="funnel">
+      <div class="funnel-step funnel-s1">1 · Lead nuevo<small>Cargar en CRM con tipo de negocio + origen</small></div>
+      <div class="funnel-step funnel-s2">2 · Contactado<small>Registrar la primera conversación y próximo paso</small></div>
+      <div class="funnel-step funnel-s3">3 · Reunión agendada<small>Fecha, hora y objetivo claros</small></div>
+      <div class="funnel-step funnel-s4">4 · Acuerdo de captación<small>Con o sin exclusividad · subir documento</small></div>
+      <div class="funnel-step funnel-s5">5 · Publicado<small>Propiedad en portales + redes</small></div>
+      <div class="funnel-step funnel-s6">6 · Cerrado<small>Comisión pagada · pedir referido</small></div>
+    </div>
+
+    <div class="info-box warn" style="margin-top:24px">
+      <span class="info-icon">⚠️</span>
+      <div class="info-text"><strong>Regla del registro previo:</strong> si no cargas el lead <em>antes</em> del primer contacto formal, otro corredor puede registrarlo primero y perderás el derecho a comisión. <strong>Cargar siempre es lo primero.</strong></div>
+    </div>
+
+    <div class="info-box info">
+      <span class="info-icon">🔐</span>
+      <div class="info-text"><strong>Privacidad:</strong> el CRM maneja datos personales (cédula, rentas, Dicom). Respetar la ley 19.628 sobre protección de datos personales es parte del estándar TuMatch. Sube documentos solo cuando el cliente autorice.</div>
+    </div>
+
+    <div id="quiz-6" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 7: Acuerdos ===== -->
+<section class="module" id="mod-7">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 7 · Acuerdos de Captación</div>
+      <h2 class="sec-h2">Con y sin exclusividad · cuándo usar cada uno</h2>
+      <p class="sec-desc">El acuerdo de captación es el <strong>documento que transforma un referido en captación formal</strong>. Es lo que te paga el 5% adicional sobre el referido. Aquí aprendes cuándo pedir exclusividad y cuándo no.</p>
+    </div>
+
+    <div class="grid-2" style="margin-bottom:28px">
+      <div class="card" style="border-left:4px solid var(--capt-pinkDk)">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--capt-pinkDk);margin-bottom:14px">Con exclusividad</div>
+        <p style="font-family:'EB Garamond',serif;font-size:15.5px;color:var(--ui-text-soft);line-height:1.7;font-weight:500;margin-bottom:12px">Solo TuMatch comercializa la propiedad durante el plazo acordado. A cambio:</p>
+        <ul class="checklist">
+          <li>Tasación profesional y estimación de precio</li>
+          <li>Fotos profesionales + virtual tour</li>
+          <li>Difusión en portales + redes + base de compradores</li>
+          <li>Reportes periódicos al propietario</li>
+          <li>Equipo de negociación coordinado</li>
+        </ul>
+        <p style="font-family:'DM Mono',monospace;font-size:12px;color:var(--capt-pinkDk);margin-top:14px;font-weight:700">Plazo típico: 90–180 días · cláusula penal si el dueño vende por fuera</p>
+      </div>
+      <div class="card" style="border-left:4px solid var(--slate)">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--slate);margin-bottom:14px">Sin exclusividad</div>
+        <p style="font-family:'EB Garamond',serif;font-size:15.5px;color:var(--ui-text-soft);line-height:1.7;font-weight:500;margin-bottom:12px">TuMatch comercializa en paralelo con otros corredores. Se cobra solo si cierra primero.</p>
+        <ul class="checklist">
+          <li>Entrada más rápida con propietarios renuentes</li>
+          <li>Difusión en portales básicos</li>
+          <li>Menor inversión en marketing profesional</li>
+          <li>Sin cláusula penal por venta directa</li>
+          <li>Útil como primer paso hacia exclusividad</li>
+        </ul>
+        <p style="font-family:'DM Mono',monospace;font-size:12px;color:var(--slate);margin-top:14px;font-weight:700">Plazo típico: 30–60 días · sin penalidad · marketing estándar</p>
+      </div>
+    </div>
+
+    <div class="sec-header" style="margin-top:16px;margin-bottom:18px">
+      <div class="sec-tag"><span class="dot"></span>Decisión rápida</div>
+      <h2 class="sec-h2" style="font-size:24px">¿Exclusividad sí o no?</h2>
+    </div>
+
+    <div style="overflow-x:auto">
+      <table class="barrio-table">
+        <thead><tr><th>Situación del cliente</th><th>Recomendación</th><th>Por qué</th></tr></thead>
+        <tbody>
+          <tr><td>Propietario motivado, pide asesoría profesional</td><td><strong>Exclusividad 90 días</strong></td><td>La inversión en marketing se justifica y protege la comisión</td></tr>
+          <tr><td>Ya tiene 2–3 corredores en paralelo</td><td><strong>Sin exclusividad primero</strong></td><td>Entrar rápido, demostrar servicio, escalar a exclusividad</td></tr>
+          <tr><td>Urgencia real (divorcio, mudanza país)</td><td><strong>Exclusividad corta 60d + plan intensivo</strong></td><td>Justifica la prisa y concentra esfuerzo</td></tr>
+          <tr><td>Primera experiencia vendiendo, temeroso</td><td><strong>90d con opción a extender</strong></td><td>Plazo corto baja riesgo percibido</td></tr>
+          <tr><td>Segunda propiedad del cliente (recurrente)</td><td><strong>Exclusividad estándar 180d</strong></td><td>Ya conoce el proceso, confía en el corredor</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box pink" style="margin-top:24px">
+      <span class="info-icon">📋</span>
+      <div class="info-text"><strong>Cláusulas que nunca pueden faltar:</strong> precio pedido, canon/comisión, plazo, modalidad (exclusiva/no), deberes del corredor, deberes del propietario, cláusula de salida anticipada, y condiciones en caso de venta directa.</div>
+    </div>
+
+    <div id="quiz-7" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 8: Captar en precio / Tasación ===== -->
+<section class="module" id="mod-8">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 8 · Captar en Precio</div>
+      <h2 class="sec-h2">La herramienta de tasación es tu mejor aliada</h2>
+      <p class="sec-desc">Un precio sobre-mercado es el <strong>error #1 del captador novato</strong>. Quema tiempo, marketing, y la relación con el cliente. Aquí aprendes a defender un precio basado en datos usando la <a href="https://tumatch-leads.vercel.app/herramientas/tasacion" target="_blank" style="color:var(--capt-pinkDk);font-weight:700;text-decoration:underline">herramienta de tasación TuMatch</a>.</p>
+    </div>
+
+    <div class="grid-2" style="margin-bottom:28px">
+      <div class="card-dark" style="border-color:rgba(232,48,122,.35)">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#FCA5D4;margin-bottom:14px">Síntomas de precio mal captado</div>
+        <ul style="list-style:none;padding:0;color:#D8E0EA;font-size:14.5px;line-height:1.75">
+          <li style="padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08)">◆ 4+ semanas sin una sola visita agendada</li>
+          <li style="padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08)">◆ Ofertas 20%+ bajo precio pedido</li>
+          <li style="padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08)">◆ Cliente empieza a presionar al corredor</li>
+          <li style="padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08)">◆ Propiedades comparables se venden alrededor</li>
+          <li style="padding:8px 0">◆ Ruido en portales: "muchas visitas, ninguna oferta"</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left:4px solid var(--capt-pink)">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--capt-pinkDk);margin-bottom:14px">Método TuMatch para captar en precio</div>
+        <ol style="padding-left:22px;font-family:'EB Garamond',serif;font-size:15.5px;color:var(--ui-text-soft);line-height:1.75;font-weight:500">
+          <li style="margin-bottom:10px">Abre <strong>/herramientas/tasacion</strong> con el cliente</li>
+          <li style="margin-bottom:10px">Levanta 5–8 comparables recientes del sector</li>
+          <li style="margin-bottom:10px">Muestra UF/m² mediana + rango</li>
+          <li style="margin-bottom:10px">Define precio probable de venta y precio pedido (margen 5–10%)</li>
+          <li style="margin-bottom:10px">Firma el acuerdo con el precio técnico respaldado</li>
+          <li>Si el cliente insiste en +20%, documenta y acepta plazo corto</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="info-box info">
+      <span class="info-icon">📊</span>
+      <div class="info-text"><strong>Tip práctico:</strong> cuando el cliente ve en pantalla que 8 propiedades comparables cerraron a UF/m² específico en los últimos 6 meses, <em>el precio deja de ser una opinión y se vuelve un dato</em>. Esa conversión es tu trabajo.</div>
+    </div>
+
+    <div class="sec-header" style="margin-top:30px;margin-bottom:18px">
+      <div class="sec-tag"><span class="dot"></span>Captación arrendador</div>
+      <h2 class="sec-h2" style="font-size:24px">Canon de arriendo · misma lógica</h2>
+    </div>
+
+    <div class="info-box warn">
+      <span class="info-icon">⚠️</span>
+      <div class="info-text">Un <strong>canon sobre-mercado</strong> genera vacancia prolongada. 1 mes sin arrendar cuesta más que 1 UF menos de canon mensual. Usa la calculadora de arriendo y los comparables del sector para defender un canon competitivo desde la primera reunión.</div>
+    </div>
+
+    <div id="quiz-8" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 9: Arrendatario estrella ===== -->
+<section class="module" id="mod-9">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 9 · Captación de Arrendatario</div>
+      <h2 class="sec-h2">Perfil Estrella ★ · validación de captación</h2>
+      <p class="sec-desc">Para que la captación de un arrendatario se considere <strong>completada</strong> y te pague el 10% del lado, no basta con presentar un nombre. Necesitas entregarlo con la documentación cargada en el CRM y validado con el perfil estrella.</p>
+    </div>
+
+    <div class="star-profile-card">
+      <h4>Documentación mínima para perfil estrella</h4>
+      <ul>
+        <li>Cédula de identidad vigente (ambos lados, legible)</li>
+        <li>Últimas 3 liquidaciones de sueldo o renta acreditable (boletas/F22 si es independiente)</li>
+        <li>Certificado de AFP con cotizaciones</li>
+        <li>Informe Dicom / score crediticio</li>
+        <li>Carta de recomendación del arrendador anterior (si aplica)</li>
+        <li>Documento de aval calificado (si el cliente lo requiere)</li>
+        <li>Orden de visita firmada por el arrendatario</li>
+      </ul>
+    </div>
+
+    <div class="info-box warn">
+      <span class="info-icon">★</span>
+      <div class="info-text"><strong>Sin estrella, sin 5% adicional:</strong> si el lead arrendatario no llega con la carpeta documental completa al CRM, el caso cuenta como <em>referido simple (5%)</em>, no como captador (10%). La estrella es la evidencia visual de que cumpliste tu parte.</div>
+    </div>
+
+    <div class="grid-2" style="margin:28px 0">
+      <div class="card">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--capt-pinkDk);margin-bottom:14px">Flujo para obtener la estrella</div>
+        <ol style="padding-left:22px;font-family:'EB Garamond',serif;font-size:15.5px;color:var(--ui-text-soft);line-height:1.7;font-weight:500">
+          <li style="margin-bottom:8px">Perfil básico creado en CRM con tipo "Arrendatario"</li>
+          <li style="margin-bottom:8px">Solicitar documentos al cliente por WhatsApp con checklist</li>
+          <li style="margin-bottom:8px">Subir cada documento a la ficha del lead con acceso restringido</li>
+          <li style="margin-bottom:8px">Validación automática + revisión del TL</li>
+          <li style="margin-bottom:8px">Perfil cambia a Estrella ★ → se gatilla derecho a 10%</li>
+          <li>Orden de visita firmada se sube como adjunto final</li>
+        </ol>
+      </div>
+      <div class="card">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);margin-bottom:14px">Banderas rojas del arrendatario</div>
+        <ul class="checklist warn">
+          <li>Dicom activo sin aval calificado ni garantía adicional</li>
+          <li>Renta líquida menor a 3× el canon</li>
+          <li>Contrato temporal sin historial crediticio</li>
+          <li>Negativa a entregar documentos básicos</li>
+          <li>Historial de juicios de arrendamiento previos</li>
+          <li>Referencias imposibles de contactar</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-box pink">
+      <span class="info-icon">🔒</span>
+      <div class="info-text"><strong>Privacidad y ley 19.628:</strong> toda la documentación se maneja con accesos restringidos en el CRM. Nunca envíes cédulas ni liquidaciones por WhatsApp personal: solo a través del CRM. Es parte del estándar profesional TuMatch.</div>
+    </div>
+
+    <div id="quiz-9" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== MÓDULO 10: TL y Sinergia del Equipo ===== -->
+<section class="module" id="mod-10">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Módulo 10 · Tu aliado Team Leader</div>
+      <h2 class="sec-h2">El TL · tu socio que acelera tus cierres</h2>
+      <p class="sec-desc">Trabajar con un Team Leader <strong>no te resta comisiones: te las hace posibles</strong>. El TL es tu aliado profesional que, junto a su equipo, transforma tus captaciones en negocios cerrados y pagados.</p>
+    </div>
+
+    <div class="info-box success" style="margin-bottom:30px">
+      <span class="info-icon">🤝</span>
+      <div class="info-text"><strong>Regla de oro:</strong> la comisión del TL la paga TuMatch desde <em>su propia tajada</em>, no desde la tuya. Tu 30% como captador <strong>se mantiene intacto</strong>. El TL cobra porque organiza al equipo que convierte tu captación en cierre — y eso hace que tú cobres.</p>
+    </div>
+
+    <div class="grid-2" style="margin-bottom:34px">
+      <div class="card" style="border-left:4px solid var(--capt-pink)">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--capt-pinkDk);margin-bottom:14px">Lo que gana el captador al tener TL</div>
+        <ul class="checklist">
+          <li><strong>Mayor probabilidad de cierre</strong>: su equipo ejecuta tus captaciones con profesionalismo</li>
+          <li><strong>Guía de zona</strong>: el TL conoce dónde captar con mejor rotación y precio alineado</li>
+          <li><strong>Coaching real</strong>: revisa tus acuerdos antes de firmar, mejora tu lenguaje con clientes</li>
+          <li><strong>Apoyo en negociaciones</strong> complejas cuando el cliente dobla la mano</li>
+          <li><strong>Validación del perfil estrella ★</strong> para arrendatarios</li>
+          <li><strong>Red ampliada</strong>: sus contactos se vuelven potenciales clientes</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left:4px solid var(--gold)">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--goldDk);margin-bottom:14px">Lo que aporta el captador al equipo</div>
+        <ul class="checklist">
+          <li>Trae propiedades y clientes nuevos desde su red</li>
+          <li>Amplía el stock que el equipo puede trabajar</li>
+          <li>Activa zonas donde el TL no llega solo</li>
+          <li>Enriquece el pipeline con leads calificados</li>
+          <li>Gana al TL espacio para coordinar en vez de prospectar</li>
+          <li>Crecen juntos: más captaciones → más cierres → más comisiones para todos</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-header" style="margin-top:20px;margin-bottom:18px">
+      <div class="sec-tag"><span class="dot"></span>Sinergia en acción</div>
+      <h2 class="sec-h2" style="font-size:28px">Cómo se convierte una captación en cierre</h2>
+      <p class="sec-desc">Sin el equipo del TL, una captación queda como propiedad publicada esperando. <strong>Con TL, se ejecuta, se cierra y se cobra.</strong></p>
+    </div>
+
+    <div class="funnel" style="max-width:680px">
+      <div class="funnel-step funnel-s1">1 · Tú captas<small>Trabajas tu red caliente/tibia, formalizas el acuerdo en CRM</small></div>
+      <div class="funnel-step funnel-s2">2 · TL valida y coordina<small>Revisa acuerdo, asigna corredor ejecutor del equipo, define estrategia</small></div>
+      <div class="funnel-step funnel-s3">3 · Equipo ejecuta<small>Corredor freelance visita, negocia, muestra propiedad y cierra</small></div>
+      <div class="funnel-step funnel-s4">4 · Cierre efectivo<small>Se firma contrato/escritura y TuMatch factura al cliente</small></div>
+      <div class="funnel-step funnel-s5">5 · Todos cobran<small>Captador (tú) · Corredor ejecutor · TL · TuMatch</small></div>
+    </div>
+
+    <div class="info-box pink" style="margin-top:20px">
+      <span class="info-icon">💡</span>
+      <div class="info-text"><strong>Sin equipo, no hay cierre.</strong> Una captación sin alguien que la ejecute es una oportunidad que vence. Por eso, aunque el TL suma una pieza más al reparto, <em>el captador cobra mucho más seguido y más fuerte</em> que si trabajara solo. Calidad de ejecución = velocidad de cobro.</div>
+    </div>
+
+    <div class="sec-header" style="margin-top:40px;margin-bottom:18px">
+      <div class="sec-tag"><span class="dot"></span>Distribución del lado</div>
+      <h2 class="sec-h2" style="font-size:28px">Quién cobra qué · ejemplo lado comprador</h2>
+      <p class="sec-desc">Tu 30% como captador permanece fijo. El 7,5% del TL <strong>sale del 40% que TuMatch normalmente retiene</strong>, no de tu tajada.</p>
+    </div>
+
+    <div class="grid-2" style="margin-bottom:24px">
+      <div class="card-dark" style="background:linear-gradient(135deg,#0A0F17,#142335);color:#FFF;padding:26px 30px;border-radius:14px;border:1px solid rgba(255,255,255,.08)">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;color:#FCA5D4;margin-bottom:16px">Caso típico · comprador con TL</div>
+        <div style="font-family:'DM Sans',sans-serif;font-size:16px;color:#D8E0EA;line-height:2">
+          <div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.1)"><span><strong style="color:#FFF">Tú (captador)</strong></span><span style="color:#6EE7A7;font-weight:700;font-family:'DM Mono',monospace">30%</span></div>
+          <div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.1)"><span><strong style="color:#FFF">Ejecutor del equipo</strong></span><span style="color:#6EE7A7;font-weight:700;font-family:'DM Mono',monospace">30%</span></div>
+          <div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.1)"><span><strong style="color:#FFF">TL</strong> <em style="color:#C8D3E0;font-size:14px">(lo paga TuMatch)</em></span><span style="color:#FCA5D4;font-weight:700;font-family:'DM Mono',monospace">4,5%</span></div>
+          <div style="display:flex;justify-content:space-between;padding:6px 0"><span><strong style="color:#FFF">TuMatch</strong></span><span style="color:#C8D3E0;font-weight:700;font-family:'DM Mono',monospace">35,5%</span></div>
+        </div>
+        <div style="margin-top:14px;padding:12px 14px;background:rgba(252,165,212,.1);border:1px solid rgba(252,165,212,.3);border-radius:8px;font-family:'EB Garamond',serif;font-style:italic;font-size:15px;color:#FFE4EE;line-height:1.6">
+          <strong style="color:#FFF">Nota importante</strong> — Sin TL, TuMatch retendría el 40% completo del lado y nadie ejecutaría tu captación. Con TL, TuMatch paga al TL desde ese 40% (por eso retiene 35,5%). Tu 30% no cambia.
+        </div>
+      </div>
+      <div class="card" style="border-left:4px solid #16A34A">
+        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#15803D;margin-bottom:14px">Por qué el TL te quiere cerca</div>
+        <p style="font-family:'EB Garamond',serif;font-size:17px;color:var(--ui-text);line-height:1.75;font-weight:500;margin-bottom:14px">El TL cobra un porcentaje sobre <strong>cada operación que cierre su equipo</strong>. Cada captación que tú traes es una oportunidad más para que su equipo gane, para que él gane, y para que <strong>tú cobres</strong>.</p>
+        <p style="font-family:'EB Garamond',serif;font-size:17px;color:var(--ui-text);line-height:1.75;font-weight:500">Por eso te entrega <em>tiempo, conocimiento y apoyo real</em>: cada hora que te dedica vuelve en forma de negocios cerrados. Es un incentivo alineado al 100%.</p>
+      </div>
+    </div>
+
+    <div class="sec-header" style="margin-top:30px;margin-bottom:18px">
+      <div class="sec-tag"><span class="dot"></span>Caminos de crecimiento</div>
+      <h2 class="sec-h2" style="font-size:28px">Elige tu ruta junto al TL</h2>
+    </div>
+
+    <div class="grid-3">
+      <div class="tip-card">
+        <div class="tip-title">Captador part-time</div>
+        <div class="tip-text">Trabajas tu red mientras mantienes tu ocupación principal. <strong>Rentabilizas tus redes</strong> con el TL ejecutando en paralelo. Ideal para empezar sin riesgo.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-title">Captador full-time</div>
+        <div class="tip-text">Captación es tu ingreso principal. <strong>Dedicas 6+ horas diarias</strong> a red y CRM. El TL te asigna zonas estratégicas donde tu volumen se convierte rápido en cierres.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-title">Corredor freelance</div>
+        <div class="tip-text">Si te apasiona el negocio, te capacitamos para captar <strong>círculo frío</strong> y ejecutar tus propias gestiones junto al equipo del TL. Ruta hacia 60% del lado.</div>
+      </div>
+    </div>
+
+    <div class="info-box success" style="margin-top:32px">
+      <span class="info-icon">🚀</span>
+      <div class="info-text"><strong>Paso final del onboarding:</strong> al aprobar la prueba y descargar tu certificado, aparece un botón de WhatsApp. Ahí activamos tu CRM, te asignamos el TL por zona, y coordinamos la firma del Anexo N°2 de Referidos y Captación. Bienvenido al equipo.</div>
+    </div>
+
+    <div id="quiz-10" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== PRUEBA FINAL ===== -->
+<section class="module" id="mod-final">
+  <div class="page">
+    <div class="sec-header">
+      <div class="sec-tag"><span class="dot"></span>Prueba Final · Certificación Captador</div>
+      <h2 class="sec-h2">30 preguntas · 30 correctas para certificarte</h2>
+      <p class="sec-desc">Esta es la prueba de cierre del onboarding. Se extraen 30 preguntas del banco combinado de los 10 módulos. Debes responder <strong>las 30 correctamente</strong>. Si te equivocas, la pregunta rota y puedes reintentar. Al aprobar recibes tu certificado y el botón de WhatsApp para activar tu perfil.</p>
+    </div>
+    <div id="quiz-final" class="quiz-gate"></div>
+  </div>
+</section>
+
+<!-- ===== CIERRE · CERTIFICADO ===== -->
+<section class="module" id="mod-done">
+  <div class="page">
+    <div id="done-content"></div>
+  </div>
+</section>
+
+<footer style="background:var(--ui-surface-soft);border-top:1px solid var(--ui-border-soft);padding:28px 20px;text-align:center;font-family:'EB Garamond',serif;font-size:14px;color:var(--ui-text-soft);line-height:1.6">
+  <div style="max-width:720px;margin:0 auto">
+    <strong style="color:var(--ui-text);font-family:'Cinzel',serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:800">TuMatch Inmobiliario SpA</strong><br>
+    Academia de Corredores · Onboarding Captador 2026 · Documento interno y confidencial<br>
+    <span style="font-size:14px;color:var(--ui-text-soft)"><a href="mailto:corretaje@tumatchinmobiliario.cl" style="color:inherit;text-decoration:none;font-weight:600">corretaje@tumatchinmobiliario.cl</a> · <a href="https://wa.me/56934107448" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;font-weight:600">WhatsApp +56 9 3410 7448</a></span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

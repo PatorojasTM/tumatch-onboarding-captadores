@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADMIN · Onboarding Captador TuMatch · Revisión completa</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,700;0,800&family=DM+Sans:wght@400;500;600;700;800&family=DM+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>
+  (function(){
+    try{
+      var saved = localStorage.getItem('tumatch_theme');
+      if (saved === 'dark' || saved === 'light') { document.documentElement.setAttribute('data-theme', saved); }
+    }catch(e){}
+  })();
+</script>
+<style>
+  body{padding-bottom:100px}
+  .admin-banner{position:sticky;top:0;z-index:50;background:linear-gradient(135deg,#0D1B2A,#1C2F44);color:#FFF;padding:16px 24px;border-bottom:3px solid var(--capt-pink);box-shadow:0 4px 22px rgba(13,27,42,.28);display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+  .admin-banner-title{font-family:'Cinzel',serif;font-size:17px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:#FCA5D4}
+  .admin-banner-sub{font-family:'EB Garamond',serif;font-size:15px;color:#D8E0EA;font-style:italic;flex:1;min-width:220px}
+  .admin-banner-theme{background:transparent;border:1.5px solid rgba(255,255,255,.25);color:#FFF;padding:8px 16px;border-radius:8px;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;letter-spacing:.5px;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+  .admin-banner-theme:hover{background:rgba(255,255,255,.1);border-color:var(--capt-pink)}
+  .admin-wrap{max-width:1080px;margin:0 auto;padding:36px 28px}
+
+  .admin-intro{background:linear-gradient(135deg,rgba(232,48,122,.06),rgba(212,160,23,.04));border:1.5px solid var(--capt-border);border-radius:16px;padding:26px 30px;margin-bottom:28px;font-family:'EB Garamond',serif;font-size:16.5px;line-height:1.7;color:var(--ui-text)}
+  .admin-intro strong{color:var(--capt-pinkDk)}
+  [data-theme="dark"] .admin-intro strong{color:#FDA4C4}
+
+  .admin-toc{background:var(--ui-surface);border:1.5px solid var(--ui-border);border-radius:16px;padding:26px 30px;margin-bottom:40px;box-shadow:0 4px 20px rgba(13,27,42,.06)}
+  .admin-toc h2{font-family:'Cinzel',serif;font-size:19px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--capt-pinkDk);margin-bottom:14px}
+  [data-theme="dark"] .admin-toc h2{color:#FDA4C4}
+  .admin-toc ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+  .admin-toc li{font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:600}
+  .admin-toc a{color:var(--ui-text);text-decoration:none;display:block;padding:10px 14px;border-radius:8px;border:1px solid var(--ui-border-soft);transition:all .15s}
+  .admin-toc a:hover{background:var(--capt-soft);border-color:var(--capt-border);color:var(--capt-pinkDk);transform:translateX(2px)}
+  [data-theme="dark"] .admin-toc a:hover{color:#FDA4C4}
+  .admin-toc .toc-num{font-family:'DM Mono',monospace;font-size:12px;color:var(--ui-text-muted);margin-right:8px;font-weight:700}
+
+  .admin-module{background:var(--ui-surface);border:1.5px solid var(--ui-border);border-radius:16px;padding:0;margin-bottom:36px;box-shadow:0 4px 22px rgba(13,27,42,.06);overflow:hidden}
+  .admin-module-head{background:linear-gradient(135deg,rgba(232,48,122,.06),rgba(212,160,23,.04));border-bottom:2px solid var(--capt-border);padding:24px 34px;display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+  .admin-module-num{font-family:'Cinzel',serif;font-size:36px;font-weight:900;color:var(--capt-pink);line-height:1}
+  .admin-module-title{font-family:'Playfair Display',serif;font-size:26px;font-weight:800;color:var(--ui-text);letter-spacing:-.3px;flex:1;min-width:200px}
+  .admin-module-meta{font-family:'DM Mono',monospace;font-size:12.5px;color:var(--ui-text-muted);text-transform:uppercase;letter-spacing:1.5px;font-weight:700}
+
+  .admin-section-tag{font-family:'Cinzel',serif;font-size:12px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:var(--capt-pinkDk);background:var(--capt-soft);border:1px solid var(--capt-border);border-radius:30px;padding:6px 16px;display:inline-block;margin:24px 34px 12px}
+  [data-theme="dark"] .admin-section-tag{color:#FDA4C4;background:rgba(232,48,122,.18)}
+
+  /* Contenido extraído de index.html — contenedor que aísla */
+  .admin-module-content{padding:10px 34px 24px;border-bottom:1px dashed var(--ui-border)}
+  .admin-module-content .page{max-width:none;padding:0;margin:0}
+  .admin-module-content .module{display:block !important;animation:none}
+  .admin-module-content .sec-header{margin-bottom:24px}
+  .admin-module-content .sec-h2{font-size:clamp(24px,3.4vw,32px) !important;margin-bottom:10px}
+  .admin-module-content .sec-desc{font-size:17px !important}
+  .admin-module-content .quiz-gate{display:none !important} /* ocultamos quiz placeholder */
+
+  .admin-quiz-wrap{padding:28px 34px}
+  .admin-quiz-wrap h3{font-family:'Cinzel',serif;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--capt-pinkDk);margin-bottom:14px;font-weight:800}
+  [data-theme="dark"] .admin-quiz-wrap h3{color:#FDA4C4}
+
+  .admin-q{background:var(--ui-surface-soft);border:1px solid var(--ui-border-soft);border-left:5px solid var(--capt-pink);border-radius:10px;padding:20px 22px;margin-bottom:16px}
+  .admin-q-head{display:flex;align-items:flex-start;gap:10px;margin-bottom:12px}
+  .admin-q-n{font-family:'DM Mono',monospace;font-size:13px;background:var(--capt-pinkDk);color:#FFF;padding:4px 10px;border-radius:6px;font-weight:800;letter-spacing:1px;flex-shrink:0}
+  .admin-q-text{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--ui-text);line-height:1.5;flex:1}
+  .admin-opts{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
+  .admin-opt{padding:12px 16px;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.55;color:var(--ui-text);border:1.5px solid var(--ui-border);background:var(--ui-surface);display:flex;gap:12px;align-items:flex-start;flex-wrap:wrap}
+  .admin-opt-letter{font-family:'DM Mono',monospace;font-size:12px;background:var(--ui-surface-tint);color:var(--ui-text-soft);padding:3px 9px;border-radius:5px;font-weight:800;flex-shrink:0;min-width:26px;text-align:center}
+  .admin-opt.correct{background:rgba(22,163,74,.12);border-color:rgba(22,163,74,.4);color:var(--ui-text);font-weight:600}
+  .admin-opt.correct .admin-opt-letter{background:#16A34A;color:#FFF}
+  .admin-opt.correct::after{content:'✓ CORRECTA';font-family:'DM Mono',monospace;font-size:10.5px;color:#16A34A;margin-left:auto;background:rgba(22,163,74,.15);padding:3px 8px;border-radius:6px;font-weight:800;letter-spacing:1.2px;flex-shrink:0;align-self:center}
+  [data-theme="dark"] .admin-opt.correct{background:rgba(22,163,74,.2);border-color:rgba(34,197,94,.45);color:#D1FADF}
+  [data-theme="dark"] .admin-opt.correct::after{color:#6EE7A7;background:rgba(22,163,74,.3)}
+  .admin-opt-why{font-family:'EB Garamond',serif;font-size:14.5px;color:var(--ui-text-muted);font-style:italic;margin-top:4px;line-height:1.55;flex-basis:100%;padding-left:38px}
+  .admin-whyexp{background:var(--ui-surface);border-left:4px solid #16A34A;border-radius:6px;padding:12px 16px;font-family:'EB Garamond',serif;font-size:15.5px;color:var(--ui-text);line-height:1.7;font-weight:500;margin-top:6px}
+  .admin-whyexp strong{color:#16A34A;display:block;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;font-weight:800}
+  [data-theme="dark"] .admin-whyexp{background:var(--ui-surface-tint);border-left-color:#22C55E;color:var(--ui-text)}
+  [data-theme="dark"] .admin-whyexp strong{color:#6EE7A7}
+
+  .admin-data-block{background:var(--ui-surface-tint);border-radius:10px;padding:18px 22px;margin:0 34px 20px}
+  .admin-data-block h3{font-family:'Cinzel',serif;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--capt-pinkDk);margin-bottom:12px;font-weight:800}
+  [data-theme="dark"] .admin-data-block h3{color:#FDA4C4}
+
+  .admin-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:32px}
+  .admin-stat{background:var(--ui-surface);border:1.5px solid var(--ui-border);border-radius:12px;padding:18px 22px;text-align:center;box-shadow:0 2px 12px rgba(13,27,42,.05)}
+  .admin-stat-num{font-family:'Cinzel',serif;font-size:36px;font-weight:900;color:var(--capt-pinkDk);line-height:1;margin-bottom:6px}
+  [data-theme="dark"] .admin-stat-num{color:#FDA4C4}
+  .admin-stat-lbl{font-family:'DM Sans',sans-serif;font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ui-text-soft);font-weight:700}
+
+  .admin-loading{padding:24px 34px;font-family:'EB Garamond',serif;font-size:16px;color:var(--ui-text-soft);font-style:italic;text-align:center}
+
+  /* Preview del Hero del onboarding */
+  .admin-hero-preview .hero-new{padding:40px 28px}
+  .admin-hero-preview .hero-meta-num{font-size:28px}
+  .admin-hero-preview{border-bottom:1px dashed var(--ui-border)}
+
+  @media(max-width:700px){
+    .admin-module-head{padding:20px 22px}
+    .admin-module-content, .admin-quiz-wrap{padding-left:22px;padding-right:22px}
+    .admin-data-block{margin-left:22px;margin-right:22px}
+    .admin-section-tag{margin-left:22px;margin-right:22px}
+    .admin-module-num{font-size:28px}
+    .admin-module-title{font-size:21px}
+    .admin-q{padding:16px 18px}
+    .admin-q-text{font-size:16px}
+    .admin-opt{font-size:14.5px;padding:10px 12px}
+    .admin-opt.correct::after{margin-left:0;margin-top:6px}
+  }
+</style>
+</head>
+<body>
+
+<div class="admin-banner">
+  <div>
+    <div class="admin-banner-title">🔐 Admin · Onboarding Captador TuMatch</div>
+    <div class="admin-banner-sub">Vista de revisión completa: contenido entregado a participantes + preguntas con respuestas correctas + certificado.</div>
+  </div>
+  <button class="admin-banner-theme" onclick="toggleAdminTheme()">Cambiar modo</button>
+  <a class="admin-banner-theme" href="index.html">← Ver onboarding real</a>
+</div>
+
+<div class="admin-wrap">
+
+  <div class="admin-intro">
+    <strong>Qué ves aquí:</strong> esta vista reproduce el onboarding completo tal como lo recibe un participante — hero, información previa, cada módulo con todo su contenido (textos, cards, tablas, gráficos, listas, círculos, embudo, perfil estrella) y <em>además</em> expone las 20 preguntas del banco de ese módulo con la respuesta correcta marcada y las explicaciones de por qué cada alternativa está bien o mal. Al final, el banco de 50 preguntas de la prueba final y el certificado oficial.
+  </div>
+
+  <div class="admin-stats" id="admin-stats"></div>
+
+  <div class="admin-toc">
+    <h2>📚 Índice</h2>
+    <ul id="admin-toc-list"></ul>
+  </div>
+
+  <!-- Preview del hero del onboarding -->
+  <div class="admin-module admin-hero-preview">
+    <div class="admin-module-head">
+      <div class="admin-module-num">◆</div>
+      <div class="admin-module-title">Bienvenida · Información previa al taller</div>
+      <div class="admin-module-meta">Hero + pre-taller que ve el participante</div>
+    </div>
+    <div class="admin-module-content" id="admin-hero-content">
+      <div class="admin-loading">Cargando contenido del hero…</div>
+    </div>
+  </div>
+
+  <!-- Datos de referencia (reutilizable en módulos) -->
+  <div class="admin-module" id="admin-data">
+    <div class="admin-module-head">
+      <div class="admin-module-num">◇</div>
+      <div class="admin-module-title">Datos de referencia · Comisiones y Círculos</div>
+      <div class="admin-module-meta">Visible en módulos 2 y 3</div>
+    </div>
+    <div class="admin-data-block">
+      <h3>Tabla de Comisiones 2026 (Anexo N°2)</h3>
+      <table class="barrio-table">
+        <thead><tr><th>Lado</th><th>Referido</th><th>Captador</th><th>Notas</th></tr></thead>
+        <tbody id="commissions-tbody"></tbody>
+      </table>
+    </div>
+    <div class="admin-data-block">
+      <h3>Círculos de red</h3>
+      <table class="barrio-table">
+        <thead><tr><th>Tipo</th><th>Descripción</th><th>Conversión</th></tr></thead>
+        <tbody id="circles-tbody"></tbody>
+      </table>
+    </div>
+    <div class="admin-data-block">
+      <h3>Mensajes simpáticos al equivocarse</h3>
+      <ul id="friendly-list" style="list-style:disc;padding-left:22px;font-family:'EB Garamond',serif;font-size:16px;line-height:1.75;color:var(--ui-text);margin:0"></ul>
+    </div>
+  </div>
+
+  <!-- Módulos -->
+  <div id="admin-modules">
+    <div class="admin-loading">Cargando módulos…</div>
+  </div>
+
+  <!-- Banco final -->
+  <div class="admin-module" id="admin-final">
+    <div class="admin-module-head">
+      <div class="admin-module-num">★</div>
+      <div class="admin-module-title">Prueba Final · Banco rotativo de 50 preguntas</div>
+      <div class="admin-module-meta">Se rinden 10 · 10/10 aprueba · 5 errores = 10 min bloqueo</div>
+    </div>
+    <div class="admin-quiz-wrap">
+      <div id="admin-final-qs"></div>
+    </div>
+  </div>
+
+  <!-- Vista previa del certificado -->
+  <div class="admin-module">
+    <div class="admin-module-head">
+      <div class="admin-module-num">🏆</div>
+      <div class="admin-module-title">Vista previa del certificado</div>
+      <div class="admin-module-meta">Se descarga en PNG al aprobar</div>
+    </div>
+    <div class="admin-quiz-wrap" id="admin-cert-preview"></div>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+<script>
+  const MODULE_NAMES = [
+    null,
+    'Sé Captador de TuMATCH',
+    'Comisiones 2026 · Referido y Captador',
+    'Círculos · Caliente, Tibio y Frío',
+    'Motivación y Constancia',
+    'Ecosistema y Servicios TuMatch',
+    'CRM · Embudo de Captación',
+    'Acuerdos · Con y Sin Exclusividad',
+    'Captar en Precio · Tasación',
+    'Captación de Arrendatario ★',
+    'TL, Equipo y Rentabiliza tus Redes'
+  ];
+
+  function toggleAdminTheme(){
+    const cur = document.documentElement.getAttribute('data-theme');
+    const next = cur === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('tumatch_theme', next); } catch(e){}
+  }
+
+  function renderQuestion(q, idx) {
+    const opts = q.opts.map((opt, i) => {
+      const isCorrect = i === q.correct;
+      const whyNot = (q.whyNot && q.whyNot[i]) ? q.whyNot[i] : '';
+      return (
+        '<div class="admin-opt' + (isCorrect ? ' correct' : '') + '">' +
+          '<span class="admin-opt-letter">' + String.fromCharCode(65+i) + '</span>' +
+          '<span>' + opt + '</span>' +
+          (whyNot && !isCorrect ? '<div class="admin-opt-why">✗ ' + whyNot + '</div>' : '') +
+        '</div>'
+      );
+    }).join('');
+    return (
+      '<div class="admin-q">' +
+        '<div class="admin-q-head">' +
+          '<div class="admin-q-n">P' + String(idx).padStart(2,'0') + '</div>' +
+          '<div class="admin-q-text">' + q.q + '</div>' +
+        '</div>' +
+        '<div class="admin-opts">' + opts + '</div>' +
+        '<div class="admin-whyexp"><strong>Por qué es la correcta</strong>' + q.why + '</div>' +
+      '</div>'
+    );
+  }
+
+  function renderModule(n, contentHtml) {
+    const bank = window.quizBank[n] || [];
+    const qsHtml = bank.map((q, i) => renderQuestion(q, i+1)).join('');
+    return (
+      '<div class="admin-module" id="mod-' + n + '">' +
+        '<div class="admin-module-head">' +
+          '<div class="admin-module-num">' + String(n).padStart(2,'0') + '</div>' +
+          '<div class="admin-module-title">' + MODULE_NAMES[n] + '</div>' +
+          '<div class="admin-module-meta">' + bank.length + ' preguntas en banco · 5 se rinden</div>' +
+        '</div>' +
+        '<div class="admin-section-tag"><span style="margin-right:6px">📖</span>Contenido que ve el participante</div>' +
+        '<div class="admin-module-content">' + contentHtml + '</div>' +
+        '<div class="admin-section-tag"><span style="margin-right:6px">🎯</span>Banco de preguntas (respuestas visibles)</div>' +
+        '<div class="admin-quiz-wrap">' + qsHtml + '</div>' +
+      '</div>'
+    );
+  }
+
+  function renderCertPreview() {
+    const now = new Date();
+    const fecha = now.toLocaleDateString('es-CL', {year:'numeric', month:'long', day:'numeric'});
+    const modulesHtml = [];
+    for (let i=1; i<=10; i++) {
+      modulesHtml.push('<li><span class="cert-mod-n">' + String(i).padStart(2,'0') + '</span><span>' + MODULE_NAMES[i] + '</span></li>');
+    }
+    return (
+      '<div class="tm-cert" id="cert-preview">' +
+        '<div class="tm-cert-border">' +
+          '<div class="tm-cert-corner tl"></div><div class="tm-cert-corner tr"></div><div class="tm-cert-corner bl"></div><div class="tm-cert-corner br"></div>' +
+          '<div class="tm-cert-logo-block"><img class="tm-cert-logo-img" src="assets/tumatch_horizontal_positivo.jpg" alt="TuMatch Inmobiliario"></div>' +
+          '<div class="tm-cert-eyebrow">Certificado Oficial · Academia de Corredores</div>' +
+          '<h1 class="tm-cert-title">Captador TuMatch<em>Programa Oficial para Captadores · 2026</em></h1>' +
+          '<div class="tm-cert-divider"></div>' +
+          '<div class="tm-cert-subtitle">Onboarding Captador · TuMatch Inmobiliario SpA</div>' +
+          '<p class="tm-cert-intro">Se otorga el presente reconocimiento a</p>' +
+          '<div class="tm-cert-name">Nombre del Captador</div>' +
+          '<p class="tm-cert-body">Por haber completado satisfactoriamente los diez módulos del onboarding y aprobado la prueba final con 10 de 10 correctas (banco rotativo de 50 preguntas), acreditando dominio en acuerdos de captación con y sin exclusividad, uso del CRM y embudo de captación, estimación de precio de mercado, captación de arrendatario con perfil estrella, comisiones de referido y captador 2026, círculos de red y rentabilización de contactos.</p>' +
+          '<div class="tm-cert-modules-block">' +
+            '<div class="tm-cert-modules-title">Módulos aprobados</div>' +
+            '<ol class="tm-cert-modules">' + modulesHtml.join('') + '</ol>' +
+            '<div class="tm-cert-final-badge"><span class="badge-label">Calificación final</span><span class="badge-score">10<span class="badge-slash">/</span>10</span><span class="badge-sub">Prueba final aprobada</span></div>' +
+          '</div>' +
+          '<div class="tm-cert-footer">' +
+            '<div class="tm-cert-date">Santiago, ' + fecha + '</div>' +
+            '<div class="tm-cert-seal">' +
+              '<div class="tm-cert-seal-mark"><img src="assets/tumatch_simbolo_positivo.jpg" alt="TuMatch"></div>' +
+              '<div class="tm-cert-seal-label">Sello de<br>certificación</div>' +
+            '</div>' +
+            '<div class="tm-cert-sign">' +
+              '<div class="tm-cert-stamp">' +
+                '<svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" class="tm-cert-stamp-svg">' +
+                  '<defs><path id="tmAdminArcTop" d="M 34,120 A 86,86 0 0 1 206,120" fill="none"/><path id="tmAdminArcBottom" d="M 38,120 A 82,82 0 0 0 202,120" fill="none"/></defs>' +
+                  '<circle cx="120" cy="120" r="114" fill="none" stroke="#0D1B2A" stroke-width="4"/>' +
+                  '<circle cx="120" cy="120" r="108" fill="none" stroke="#D4A017" stroke-width="0.8"/>' +
+                  '<circle cx="120" cy="120" r="100" fill="none" stroke="#E8307A" stroke-width="2.2"/>' +
+                  '<circle cx="120" cy="120" r="76" fill="none" stroke="#0D1B2A" stroke-width="1" stroke-dasharray="1 3"/>' +
+                  '<text font-family="Cinzel, serif" font-size="12" font-weight="800" letter-spacing="4.5" fill="#0D1B2A"><textPath href="#tmAdminArcTop" startOffset="50%" text-anchor="middle">TUMATCH · INMOBILIARIO</textPath></text>' +
+                  '<text font-family="Cinzel, serif" font-size="9" font-weight="700" letter-spacing="5" fill="#C42D8E"><textPath href="#tmAdminArcBottom" startOffset="50%" text-anchor="middle">CAPTADOR CERTIFICADO · 2026</textPath></text>' +
+                  '<text x="120" y="108" font-family="Cinzel, serif" font-size="12" font-weight="700" letter-spacing="3.5" text-anchor="middle" fill="#0D1B2A">APROBADO</text>' +
+                  '<text x="120" y="140" font-family="Cinzel, serif" font-size="28" font-weight="900" letter-spacing="3" text-anchor="middle" fill="#C42D8E">10/10</text>' +
+                  '<text x="120" y="168" font-family="EB Garamond, serif" font-style="italic" font-weight="600" font-size="13" text-anchor="middle" fill="#0D1B2A">captador TuMatch</text>' +
+                '</svg>' +
+              '</div>' +
+              '<div class="tm-cert-sign-line"></div>' +
+              '<div class="tm-cert-sign-name">Patricio Rojas</div>' +
+              '<div class="tm-cert-sign-role">Representante · TuMatch Inmobiliario SpA</div>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+      '</div>'
+    );
+  }
+
+  // Extrae el contenido HTML de una sección del index.html (sin el quiz-gate)
+  function extractModuleContent(doc, n) {
+    if (n === 0) {
+      const hero = doc.querySelector('#mod-0 .hero-new');
+      if (!hero) return '<div class="admin-loading">(sin hero)</div>';
+      const clone = hero.cloneNode(true);
+      // Remover botón de "comenzar" y resume banner para evitar confusión en admin
+      const cta = clone.querySelector('.hero-cta-row'); if (cta) cta.remove();
+      const resume = clone.querySelector('#resumeBanner'); if (resume) resume.remove();
+      const hint = clone.querySelector('.hero-save-hint'); if (hint) hint.remove();
+      return clone.outerHTML;
+    }
+    const mod = doc.getElementById('mod-' + n);
+    if (!mod) return '<div class="admin-loading">(módulo sin contenido adicional)</div>';
+    const page = mod.querySelector('.page');
+    if (!page) return '<div class="admin-loading">(sin .page)</div>';
+    const clone = page.cloneNode(true);
+    // Remover placeholders de quiz y elementos con onclick que apunten a App (inseguro en admin)
+    clone.querySelectorAll('.quiz-gate, #commissions-grid, #circles-grid').forEach(el => el.remove());
+    return clone.outerHTML;
+  }
+
+  // Reemplaza placeholders vacíos (grids) con contenido estático para admin
+  function hydrateStatic(n, container) {
+    if (n === 2) {
+      // Tabla de comisiones al inicio del módulo
+      const html = window.commissionData.map(c => (
+        '<div class="commission-cell"><div class="commission-lado">' + c.lado + '</div>' +
+        '<div class="commission-captador">' + c.captador + '</div>' +
+        '<div class="commission-referido">Referido ' + c.referido + '</div>' +
+        '<div class="commission-note">' + c.note + '</div></div>'
+      )).join('');
+      const block = document.createElement('div');
+      block.className = 'commission-grid';
+      block.style.margin = '20px 0';
+      block.innerHTML = html;
+      const first = container.querySelector('.info-box, .sec-header + *, p');
+      container.insertBefore(block, first ? first.nextSibling : null);
+    }
+    if (n === 3) {
+      const html = window.circlesData.map(c => (
+        '<div class="circle-card circle-' + c.type + '">' +
+          '<div class="circle-temp">' + c.temp + '</div>' +
+          '<h4>' + c.title + '</h4>' +
+          '<p>' + c.desc + '</p>' +
+          '<div class="circle-kpi">' + c.kpi + '<small>' + c.kpiLbl + '</small></div>' +
+        '</div>'
+      )).join('');
+      const block = document.createElement('div');
+      block.className = 'circle-grid';
+      block.style.margin = '20px 0';
+      block.innerHTML = html;
+      const header = container.querySelector('.sec-header');
+      if (header) header.after(block);
+      else container.prepend(block);
+    }
+  }
+
+  async function loadContent() {
+    let doc;
+    try {
+      const resp = await fetch('index.html', { cache: 'no-cache' });
+      const html = await resp.text();
+      doc = new DOMParser().parseFromString(html, 'text/html');
+    } catch(err) {
+      console.error('Error cargando index.html:', err);
+      document.getElementById('admin-modules').innerHTML =
+        '<div class="admin-loading" style="color:#DC2626">⚠️ No se pudo cargar el contenido de index.html. Revisa consola.</div>';
+      return;
+    }
+
+    // Hero
+    const heroHost = document.getElementById('admin-hero-content');
+    heroHost.innerHTML = extractModuleContent(doc, 0);
+
+    // Módulos
+    const mods = [];
+    for (let i=1; i<=10; i++) mods.push(renderModule(i, extractModuleContent(doc, i)));
+    document.getElementById('admin-modules').innerHTML = mods.join('');
+
+    // Hidratar grids de datos (m2, m3)
+    for (let i=2; i<=3; i++) {
+      const modEl = document.getElementById('mod-' + i);
+      const content = modEl.querySelector('.admin-module-content');
+      if (content) hydrateStatic(i, content);
+    }
+
+    // Prueba final
+    document.getElementById('admin-final-qs').innerHTML = window.finalBank.map((q, i) => renderQuestion(q, i+1)).join('');
+  }
+
+  function renderMeta() {
+    const qb = window.quizBank, fb = window.finalBank;
+    const totalModuleQ = Object.values(qb).reduce((a,b) => a + b.length, 0);
+    document.getElementById('admin-stats').innerHTML = (
+      '<div class="admin-stat"><div class="admin-stat-num">10</div><div class="admin-stat-lbl">Módulos</div></div>' +
+      '<div class="admin-stat"><div class="admin-stat-num">' + totalModuleQ + '</div><div class="admin-stat-lbl">Preguntas módulo</div></div>' +
+      '<div class="admin-stat"><div class="admin-stat-num">' + fb.length + '</div><div class="admin-stat-lbl">Banco prueba final</div></div>' +
+      '<div class="admin-stat"><div class="admin-stat-num">5/20</div><div class="admin-stat-lbl">Rinden/banco módulo</div></div>' +
+      '<div class="admin-stat"><div class="admin-stat-num">10/50</div><div class="admin-stat-lbl">Rinden/banco final</div></div>' +
+      '<div class="admin-stat"><div class="admin-stat-num">10 min</div><div class="admin-stat-lbl">Bloqueo por 5 errores</div></div>'
+    );
+
+    const toc = [
+      '<li><a href="#admin-hero-content"><span class="toc-num">◆</span>Bienvenida · Info previa</a></li>',
+      '<li><a href="#admin-data"><span class="toc-num">◇</span>Datos de referencia</a></li>'
+    ];
+    for (let i=1; i<=10; i++) toc.push('<li><a href="#mod-' + i + '"><span class="toc-num">M' + i + '</span>' + MODULE_NAMES[i] + '</a></li>');
+    toc.push('<li><a href="#admin-final"><span class="toc-num">★</span>Prueba Final (banco 50)</a></li>');
+    document.getElementById('admin-toc-list').innerHTML = toc.join('');
+
+    document.getElementById('commissions-tbody').innerHTML = window.commissionData.map(c => (
+      '<tr><td><strong>' + c.lado + '</strong></td><td>' + c.referido + '</td><td><strong>' + c.captador + '</strong></td><td>' + c.note + '</td></tr>'
+    )).join('');
+    document.getElementById('circles-tbody').innerHTML = window.circlesData.map(c => (
+      '<tr><td><strong>' + c.temp + '</strong><br><small style="color:var(--ui-text-muted)">' + c.title + '</small></td><td>' + c.desc + '</td><td><strong>' + c.kpi + '</strong> · ' + c.kpiLbl + '</td></tr>'
+    )).join('');
+    // Mensajes simpáticos: extraer del app.js (expuesto como global)
+    const flist = document.getElementById('friendly-list');
+    const arr = (typeof FRIENDLY_MISS !== 'undefined') ? FRIENDLY_MISS : (window.FRIENDLY_MISS || []);
+    if (arr && arr.length) flist.innerHTML = arr.map(m => '<li>' + m + '</li>').join('');
+    else flist.innerHTML = '<li style="font-style:italic;color:var(--ui-text-muted)">(carga async pendiente)</li>';
+  }
+
+  function renderCertificateSection() {
+    const host = document.getElementById('admin-cert-preview');
+    if (host) host.innerHTML = renderCertPreview();
+  }
+
+  window.addEventListener('load', () => {
+    renderMeta();
+    renderCertificateSection(); // independiente: se pinta siempre
+    loadContent().catch(err => {
+      console.error('loadContent error:', err);
+      document.getElementById('admin-modules').innerHTML =
+        '<div class="admin-loading" style="color:#DC2626">⚠️ No se pudo cargar el contenido de los módulos desde index.html. Las preguntas y el certificado siguen siendo visibles abajo.</div>';
+    });
+  });
+</script>
+</body>
+</html>
